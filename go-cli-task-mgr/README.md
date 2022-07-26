@@ -6,13 +6,13 @@
 
 A CLI tool that can be used to manage your TODOs in the terminal. The basic usage of the tool is going to look roughly like this:
 
-$ task
+$ go-cli-task-mgr
 
 Task is a CLI task manager.
 
 Usage:
 
-- task [command]
+- go-cli-task-mgr [command]
 
 Available Commands:
 
@@ -23,46 +23,46 @@ Available Commands:
 - rm - Removes a task from your list
 - reset - Resets all task list and database
 
-Use "task [command] --help" for more information about a command.
+Use "go-cli-task-mgr [command] --help" for more information about a command.
 
-$ task add review talk proposal
+$ go-cli-task-mgr add review talk proposal
 - Added "review talk proposal" to your list.
 
-$ task add clean dishes
+$ go-cli-task-mgr add clean dishes
 - Added "clean dishes" to your list.
 
-$ task add build a cli in GO
+$ go-cli-task-mgr add build a cli in GO
 - Added "build a cli in GO" to your list.
 
-$ task list
+$ go-cli-task-mgr list
 1. review talk proposal
 2. clean dishes
 3. build a cli in GO
 
-$ task do 1
+$ go-cli-task-mgr do 1
 - Marked "review talk proposal" as complete.
 
-$ task list
+$ go-cli-task-mgr list
 1. clean dishes
 2. build a cli in GO
 
-$ task completed
+$ go-cli-task-mgr completed
 1. "review talk proposal" completed.
 
-$ task rm 1
+$ go-cli-task-mgr rm 1
 - Removed "clean dishes" from your list.
 
-$ task list
+$ go-cli-task-mgr list
 1. build a cli in GO
 
-$ task completed
+$ go-cli-task-mgr completed
 1. "review talk proposal" completed.
 
-$ task reset
+$ go-cli-task-mgr reset
 - Reset successful!
 
-$ task list
+$ go-cli-task-mgr list
 - You currently have no task.
 
-$ task completed
+$ go-cli-task-mgr completed
 - You currently have no completed task.
