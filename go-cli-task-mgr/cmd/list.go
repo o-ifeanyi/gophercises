@@ -18,6 +18,7 @@ var listCmd = &cobra.Command{
 		}
 		if len(allTask) < 1 {
 			fmt.Printf("\nYou currently have no task.\n\n")
+			return
 		}
 		for i, task := range allTask {
 			fmt.Printf("\n%d. %s.\n\n", i+1, task.Value)
