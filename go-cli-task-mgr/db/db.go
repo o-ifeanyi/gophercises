@@ -78,9 +78,15 @@ func DeleteTask(tb []byte, id int) error {
 }
 
 // Resets the entire task list and db
-func ResetTask(tb []byte) error {
+func ResetTask(tb ...[]byte) error {
 	err := db.Update(func(tx *bolt.Tx) error {
-		return tx.DeleteBucket(tb)
+		for _, b := range tb {
+			err := tx.DeleteBucket(b)
+			if err != nil {
+				return err
+			}
+		}
+		return nil
 	})
 
 	if err != nil {

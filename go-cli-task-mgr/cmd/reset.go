@@ -12,11 +12,7 @@ var resetCmd = &cobra.Command{
 	Use:   "reset",
 	Short: "Resets all task list and database",
 	Run: func(cmd *cobra.Command, args []string) {
-		err := db.ResetTask(TaskBucket)
-		if err != nil {
-			log.Fatalln("Something went wrong:", err)
-		}
-		err = db.ResetTask(CompleteBucket)
+		err := db.ResetTask(TaskBucket, CompleteBucket)
 		if err != nil {
 			log.Fatalln("Something went wrong:", err)
 		}
